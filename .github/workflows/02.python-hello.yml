@@ -1,5 +1,6 @@
 name: Run Hello-world from py Script
-on: push
+on: 
+  workflow_dispatch:
 
 jobs:
   Hello:
