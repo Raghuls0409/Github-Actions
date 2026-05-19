@@ -15,7 +15,8 @@ jobs:
           python-version: '3.13' 
         
     - name: List files
-      run: ls -la
+      run: ls -la 
+      run: ls -il
 
     - name: Run a py Script
       run: python hello.py
