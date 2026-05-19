@@ -18,5 +18,8 @@ jobs:
     - name: List files
       run: ls -la 
 
+    - name: List Files with permissions
+      run: ls -il
+
     - name: Run a py Script
       run: python hello.py
