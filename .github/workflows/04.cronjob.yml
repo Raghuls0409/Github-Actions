@@ -17,5 +17,5 @@ jobs:
           with:
            python-version: '3.13' 
 
-        - name: Run python Script
+        - name: Run python Scripts through Py files
           run: Python hello.py
