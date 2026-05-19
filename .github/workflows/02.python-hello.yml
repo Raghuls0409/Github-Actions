@@ -17,7 +17,6 @@ jobs:
         
     - name: List files
       run: ls -la 
-      run: ls -il
 
     - name: Run a py Script
       run: python hello.py
