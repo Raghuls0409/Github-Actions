@@ -1,0 +1,26 @@
+name: Send Mail
+on: push
+
+jobs: 
+    mail:
+        runs-on: ubuntu-latest
+
+        steps:
+        - name: Print Hello world
+          run: echo "Hello World"
+
+        - name: Sending a Mail
+          if: ${{ always()}}
+          uses: devellany/send-mailer@v1.0.0
+          with:
+            host: smtp.gmail.com
+            port: 465
+
+            account: ${{secrets.EMAIL_USERNAME}}
+            password: ${{secrets.EMAIL_PASSWORD}}
+
+            from: Raghul S
+            to: raghuls0914@gmail.com, raghulraghav2255@gmail.com
+            subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
+            body: Hi , Raghul This Side. How are you guys?
+            
